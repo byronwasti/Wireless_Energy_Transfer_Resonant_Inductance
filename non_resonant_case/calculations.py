@@ -10,17 +10,20 @@ if __name__ == "__main__":
     # L_m is not super straightforward
 
     V0 = 10 # Volts
+    #R0 = 10 # ohm
     R0 = 1 # ohm
     w = 1000 # in Hertz
 
     #Lm = .2  # 3819 wraps
     n = 3819
-    d = .01
+    #d = .027
+    d = .015
     l = .01524
     r = 0.0115
     Lm = (2 * np.pi**2 * r**4 * n**2) / ( (d+l)**2 + r**2)**(3/2) * (mu_0/(4*np.pi))
     print(Lm)
 
+    # I is actually V in this case
     I = []
 
     TIME_RANGE = 100
@@ -32,5 +35,5 @@ if __name__ == "__main__":
         I.append(i/R0)
 
     plt.scatter(range(0,TIME_RANGE), I)
-    print(max(I))
+    print(max(I)*100)
     plt.show()

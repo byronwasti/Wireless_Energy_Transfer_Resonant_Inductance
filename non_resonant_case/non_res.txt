@@ -1,0 +1,13 @@
+- 10 Ohm across reciever coil
+
+- 100 gain (1k:100k)
+
+- 10V, 1kHz
+
+--- Get around 20mV peak to peak
+     Lots of noise
+    Expect comething like 60mV
+    Lots of assumptions, this is pretty good
+
+
+
